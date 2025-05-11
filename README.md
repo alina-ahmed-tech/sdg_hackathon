@@ -1,4 +1,25 @@
-Clone the Repo
+https://github.com/user-attachments/assets/dd8f2815-a641-4adc-996f-10ee6df40029
+
+
+<img width="1713" alt="crumbly_ss" src="https://github.com/user-attachments/assets/fafa218d-1ef1-473a-ba8a-d57c730cfa81" />
+
+
+<h1> Skills: Python, FastAPI, HTTP & REST, LangChain, Prompt Engineering, Ollama (local LLM serving) </h1>
+
+How it Works: 
+
+* The user pastes their training code and enters GPU/CPU details in the Streamlit front-end.
+* When the user clicks “Get eco-tips,” a HTTP POST request is sent to the FastAPI server, with a JSON body containing the code and hardware info.
+* FastAPI server back-end receives the request and invokes LangChain’s OllamaLLM wrapper.
+* LangChain formats the prompt template and sends it over HTTP to the local Ollama daemon running Mistral Small Instruct.
+* Ollama returns the generated text which is three energy-saving tips.
+* FastAPI packages that text into a JSON object and sends it back as the response to the original POST.
+* Streamlit front-end receives the JSON, extracts the "recommendations" field, and renders it live in the browser displaying the result. 
+
+---
+<h1> Project setup </h1>
+
+### Clone the Repo
 
 ```bash
 git clone git@github.com:alina-ahmed-tech/sdg_hackathon.git
